@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Canvas para dibujar</title>
+    </head>
+
+    <body>
+        <canvas id="myCanvas" 
+        style="border: 1px solid #d60b0b; width: 50%; height: 50%;"></canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0, 0);
+            ctx.lineTo(200, 100);
+            ctx.stroke();
+        </script>
+
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath()
+            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script>
+    </body>
+</html>

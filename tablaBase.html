@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet de Tags HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        code {
+            background-color: #e9e9e9;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap; /* Para asegurar que el código se envuelva */
+            display: block; /* Para que ocupe su propia línea */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Cheatsheet de Tags HTML UP 2025</h1>
+<p style="text-align: center; margin-bottom: 40px;">Una referencia de tags más comunes de HTML </p>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Etiqueta</th>
+            <th>Descipción</th>
+            <th>Ejemplo en el código</th>
+            <th>Resultado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>&lt;!DOCTYPE html&gt;</code></td>
+            <td>Define el tipo de documento y la versión de HTML.</td>
+            <td><code>&lt;!DOCTYPE html&gt;</code></td>
+            <td>No visible</td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;html&gt;</code></td>
+            <td>El elemento raíz de una página HTML.</td>
+            <td><code>&lt;html lang="es"&gt;</code></td>
+            <td>No visible</td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;head&gt;</code></td>
+            <td>Contiene metadatos, enlaces a CSS y scripts (no visible en la página)</td>
+            <td><code>&lt;head&gt;<br>&nbsp;&lt;meta charset="UTF-8"&gt;<br>&nbsp;&lt;title&gt;Mi Titulo&lt;/title&gt;<br>&lt;/head&gt;</code></td>
+            <td>No visible</td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;body&gt;</code></td>
+            <td>Contiene todo el contenido visible de la página web. </td>
+            <td><code>&lt;body&gt; <br>&nbsp; &lt;h1&gt; Hola Mundo &lt;/h1&gt; <br>&lt;/body&gt;</code></td>
+            <td>No visible (contiene el contenido visible)</td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;title&gt;</code></td>
+            <td>Defne el título de la página que aparece en la pestaña del navegador. </td>
+            <td><code>&lt;title&gt; Mi página web &lt;/title&gt;</code></td>
+            <td>(Aparece en la pestaña del navegador)</td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></td>
+            <td>Define encabezados de diferentes niveles, de más importante a menos. </td>
+            <td><code>
+                &lt;h1&gt; Título H1 &lt;/h1&gt;<br>
+                &lt;h2&gt; Título H2 &lt;/h2&gt;<br>
+                &lt;h3&gt; Título H3 &lt;/h3&gt;<br>
+                &lt;h4&gt; Título H4 &lt;/h4&gt;<br>
+                &lt;h5&gt; Título H5 &lt;/h5&gt;<br>
+                &lt;h6&gt; Título H6 &lt;/h6&gt;
+            </code></td>
+            <td>
+                <h1>Título H1</h1>
+                <h2>Título H2</h2>
+                <h3>Título H3</h3>
+                <h4>Título H4</h4>
+                <h5>Título H5</h5>
+                <h6>Título H6</h6>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;p&gt;</code></td>
+            <td>Define un párrafo de texto</td>
+            <td><code>&lt;p&gt; Este es un párrafo de ejemplo &lt;/p&gt;</code></td>
+            <td><p>Este es un párrafo de ejemplo</p></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;br&gt;</code></td>
+            <td>Inserta salto de línea</td>
+            <td><code>Línea 1 &lt;br&gt; Línea 2</code></td>
+            <td>Línea 1 <br> Línea 2</td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;hr&gt;</code></td>
+            <td>Inserta una línea horizontal temática</td>
+            <td><code>&lt;hr&gt;</code></td>
+            <td><hr></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;strong&gt;</code></td>
+            <td>Indica que el texto tiene una fuerte importancia</td>
+            <td><code>&lt;strong&gt;Texto Importante&lt;/strong&gt;</code></td>
+            <td><strong>Texto Importante</strong></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;em&gt;</code></td>
+            <td>Indica énfasis (generalmente en cursiva)</td>
+            <td><code>&lt;em&gt;Texto Enfatizado&lt;/em&gt;</code></td>
+            <td><em>Texto Enfatizado</em></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;em&gt;</code></td>
+            <td>Indica énfasis (generalmente en cursiva)</td>
+            <td><code>&lt;em&gt;Texto Enfatizado&lt;/em&gt;</code></td>
+            <td><em>Texto Enfatizado</em></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;b&gt;</code></td>
+            <td>Texto en negritas (sin implicación de importancia)</td>
+            <td><code>&lt;b&gt;Texto en Negritas&lt;/b&gt;</code></td>
+            <td><b>Texto en Negritas</b></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;i&gt;</code></td>
+            <td>Texto en cursiva (sin implicación de énfasis)</td>
+            <td><code>&lt;i&gt;Texto en Cursiva&lt;/i&gt;</code></td>
+            <td><i>Texto en Cursiva</i></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;u&gt;</code></td>
+            <td>Texto subrayado</td>
+            <td><code>&lt;u&gt;Texto subrayado&lt;/u&gt;</code></td>
+            <td><u>Texto subrayado</u></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;s&gt;</code></td>
+            <td>Texto tachado.</td>
+            <td><code>&lt;s&gt; Texto tachado &lt;/s&gt;</code></td>
+            <td><s>Texto Tachado</s></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;mark&gt;</code></td>
+            <td>Marca o resalta texto.</td>
+            <td><code>&lt;mark&gt; Texto Resaltado &lt;/mark&gt;</code></td>
+            <td><mark>Texto Resltado</mark></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;small&gt;</code></td>
+            <td>Define texto más pequeño</td>
+            <td><code>&lt;small&gt; Texto pequeño &lt;/small&gt;</code></td>
+            <td><small>Texto pequeño</small></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;a&gt;</code></td>
+            <td>Define un hipervínculo</td>
+            <td><code>&lt;a href="[https://www.google.com](https:www.google.com)" target="_blank"&gt; Ir a google &lt;/a&gt;</code></td>
+            <td><a href="[https://www.google.com](https:www.google.com)" target="_blank">Ir a google</a></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;img&gt;</code></td>
+            <td>Inserta una imagen</td>
+            <td><code>&lt;img src="[https://via.placeholder.com/50] (https://via.placeholder.com/50)" alt="Imagen de ejemplo"&gt;</code></td>
+            <td><img src="[https://via.placeholder.com/50] (https://via.placeholder.com/50)" alt="Imagen de ejemplo"></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;ul&gt;</code></td>
+            <td>Define una lista desordenada (con viñetas)</td>
+            <td><code>&lt;ul&gt;<br>&nbsp;&lt;li&gt;Primer elemento&lt;/li&gt;<br>&nbsp;&lt;li&gt;Segundo elemento&lt;/li&gt;<br>&lt;/ul&gt;</code></td>
+            <td><ul><li>Primer elemento</li><li>Segundo elemento</li></ul></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;ol&gt;</code></td>
+            <td>Define una lista ordenada (con números)</td>
+            <td><code>&lt;ol&gt;<br>&nbsp;&lt;li&gt;Primer elemento&lt;/li&gt;<br>&nbsp;&lt;li&gt;Segundo elemento&lt;/li&gt;<br>&lt;/ol&gt;</code></td>
+            <td><ol><li>Primer elemento</li><li>Segundo elemento</li></ol></td>
+        </tr>
+
+        <td><code>&lt;li&gt;</code></td>
+            <td>Define un elemento de la lista</td>
+            <td>Usado dentro de <code>&lt;ol&gt;</code> o <code>&lt;ul&gt;</code></td>
+            <td><ul><li>Primer elemento</li></ul></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;table&gt;</code></td>
+            <td>Define una tabla</td>
+            <td><code>&lt;table&gt;<br>&nbsp;&lt;tr&gt;&lt;th&gt;Cabecera&lt;/tr&gt;&lt;/th&gt;<br>&nbsp;&lt;tr&gt;&lt;td&gt;Dato&lt;/tr&gt;&lt;/td&gt;<br>&lt;/table&gt;<br></code></td>
+            <td><table><tr><th>Cabecera</th></tr><tr><td>Dato</td></tr></table></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;thead&gt;</code></td>
+            <td>Agrupa el contenido del encabezado de la tabla. </td>
+            <td><code>&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;tr&gt;Título&lt;/tr&gt;&lt;/tr&gt;&lt;/thead&gt;<br>&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Info&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</code></td>
+            <td><table><thead><tr><th>Título</th></tr></thead><tbody><tr><td>Info</td></tr></tbodxy></table></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;tbody&gt;</code></td>
+            <td>Agrupa el contenido del cuerpo de la tabla </td>
+            <td><code>&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;tr&gt;Título&lt;/tr&gt;&lt;/tr&gt;&lt;/thead&gt;<br>&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Info&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</code></td>
+            <td><table><thead><tr><th>Título</th></tr></thead><tbody><tr><td>Info</td></tr></tbodxy></table></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;tr&gt;</code></td>
+            <td>Define una fila en una tabla</td>
+            <td><code>&lt;table&gt;&lt;tr&gt;&lt;th&gt;A&lt;/th&gt;&lt;td&gt;B&lt;/td&gt&lt;/tr&gt;&lt;/table&gt;</code></td>
+            <td><table><tr><th>A</th><td>B</td></tr></table></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;th&gt;</code></td>
+            <td>Define una celda de encabezado en una tabla</td>
+            <td><code>&lt;table&gt;&lt;tr&gt;&lt;th&gt;Encabezado&lt;/th&gt;&lt;tr&gt;&lt;/table&gt;</code></td>
+            <td><table><tr><th>Encabezado</th><tr></table></td>
+        </tr>
+
+        <tr>
+            <td><code>&lt;td&gt;</code></td>
+            <td>Define una celda de datos en una tabla</td>
+            <td><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Dato&lt;/td&gt;&lt;tr&gt;&lt;/table&gt;</code></td>
+            <td><table><tr><td>Dato</td><tr></table></td>
+        </tr>
+
+        
+    </tbody>
+</table>
+
+\</body\>
+\</html\>
+
+</body>
+</html>

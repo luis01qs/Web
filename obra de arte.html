@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>La Última Cena — Minimalista</title>
+</head>
+<body>
+  <!-- canvas de tamaño fijo (no ocupa toda la pantalla) -->
+  <canvas id="lienzo" width="900" height="420"></canvas>
+
+  <script>
+    (function () {
+      const canvas = document.getElementById('lienzo');
+      const ctx = canvas.getContext('2d');
+
+      // Utilidades
+      const rnd = (a,b) => a + Math.random()*(b-a);
+
+      function clear() {
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+      }
+
+      function drawMinimalLastSupper() {
+        clear();
+
+        const W = canvas.width;
+        const H = canvas.height;
+
+        // Fondo suave (papel / lienzo)
+        ctx.fillStyle = '#f7f2ea';
+        ctx.fillRect(0, 0, W, H);
+
+        // Mesa (centro horizontal, ancho grande)
+        const tableTop = H * 0.55;
+        const tableHeight = H * 0.12;
+        const tableMargin = 60;
+        ctx.fillStyle = '#d8c2a0';
+        ctx.fillRect(tableMargin, tableTop, W - 2*tableMargin, tableHeight);
+
+        // Línea que sugiere borde de mesa
+        ctx.strokeStyle = 'rgba(0,0,0,0.12)';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(tableMargin, tableTop, W - 2*tableMargin, tableHeight);
+
+        // Platos (pequeños círculos sobre la mesa, minimal)
+        ctx.fillStyle = '#fff';
+        const cols = 13; // 13 figuras (Jesús + 12 apóstoles)
+        const spacing = (W - 2*tableMargin) / cols;
+        for (let i=0;i<cols;i++){
+          const px = tableMargin + spacing*(i + 0.5);
+          const py = tableTop + tableHeight*0.5;
+          ctx.beginPath();
+          ctx.arc(px, py, 8, 0, Math.PI*2);
+          ctx.fill();
+          ctx.strokeStyle = 'rgba(0,0,0,0.08)';
+          ctx.stroke();
+        }
+
+        // Figuras: cabezas (círculos) y cuerpos (rectángulos muy estilizados)
+        // Jesus en la posición central (índice 6)
+        const headR = 12;
+        for (let i=0;i<cols;i++){
+          const x = tableMargin + spacing*(i + 0.5);
+          // altura de los cuerpos, Jesús más destacado
+          const isJesus = (i === Math.floor(cols/2));
+          const bodyH = isJesus ? 72 : 60;
+          const bodyW = isJesus ? 34 : 28;
+          const bodyTop = tableTop - bodyH - 10;
+          const headY = bodyTop - headR - 2;
+
+          // cuerpo (recta minimal, con ligera curvatura simulada por arco superior)
+          ctx.fillStyle = isJesus ? '#7a5a3a' : '#b68f6a';
+          ctx.beginPath();
+          // rectángulo simple
+          ctx.rect(x - bodyW*0.5, bodyTop, bodyW, bodyH);
+          ctx.fill();
+
+          // cabeza
+          ctx.fillStyle = '#f2e0c9';
+          ctx.beginPath();
+          ctx.arc(x, headY, headR, 0, Math.PI*2);
+          ctx.fill();
+
+          // sotuer (sombra) bajo la cabeza (sutil)
+          ctx.fillStyle = 'rgba(0,0,0,0.06)';
+          ctx.beginPath();
+          ctx.ellipse(x, headY + headR - 2, headR*0.9, headR*0.45, 0, 0, Math.PI*2);
+          ctx.fill();
+
+          // pequeñas líneas que sugieren brazos sobre la mesa (minimal)
+          ctx.strokeStyle = 'rgba(0,0,0,0.08)';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          const armY = tableTop + tableHeight*0.25;
+          ctx.moveTo(x - bodyW*0.6, armY);
+          ctx.lineTo(x + bodyW*0.6, armY);
+          ctx.stroke();
+        }
+
+        // Sugerir profundidad con una franja oscura detrás (pared)
+        ctx.fillStyle = 'rgba(0,0,0,0.03)';
+        ctx.fillRect(0, tableTop - 140, W, 24);
+
+        // Título/Nombre dentro del canvas (centrado arriba)
+        ctx.fillStyle = 'rgba(30,20,10,0.9)';
+        ctx.font = '20px serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('La Última Cena', W*0.5, 34);
+
+        // Firma pequeña abajo a la derecha
+        ctx.font = '12px monospace';
+        ctx.textAlign = 'right';
+        ctx.fillText('Minimal — estudio', W - 12, H - 12);
+      }
+
+      // Dibuja al cargar
+      drawMinimalLastSupper();
+
+      // Opción: clic para regenerar pequeña variación (no obligatorio)
+      canvas.addEventListener('click', () => {
+        // pequeña variación en colores para darle vida al hacer clic
+        drawMinimalLastSupper();
+      });
+
+    })();
+  </script>
+</body>
+</html>
